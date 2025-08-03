@@ -12,13 +12,13 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.github.libretube"
+        applicationId = "com.github.ThunderTube"
         minSdk = 26
         targetSdk = 35
         versionCode = 62
         versionName = "0.28.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        resValue("string", "app_name", "LibreTube")
+        resValue("string", "app_name", "ThunderTube")
 
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
@@ -43,7 +43,7 @@ android {
         getByName("debug") {
             isDebuggable = true
             applicationIdSuffix = ".debug"
-            resValue("string", "app_name", "LibreTube Debug")
+            resValue("string", "app_name", "ThunderTube")
         }
     }
 
@@ -57,7 +57,6 @@ android {
         jvmTarget = "17"
     }
 
-    // Comment this block if issues occur while generating the baseline profile
     splits {
         abi {
             isEnable = true
@@ -83,22 +82,18 @@ android {
     }
 
     dependenciesInfo {
-        // Disables dependency metadata when building APKs.
         includeInApk = false
-        // Disables dependency metadata when building Android App Bundles.
         includeInBundle = false
     }
 
-    // language preference for Android 13 and above
     androidResources {
         generateLocaleConfig = true
     }
 
-    namespace = "com.github.libretube"
+    namespace = "com.github.ThunderTube"
 }
 
 dependencies {
-    /* Android Core */
     implementation(libs.androidx.activity)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core)
@@ -114,49 +109,38 @@ dependencies {
     implementation(libs.androidx.media)
     implementation(libs.androidx.swiperefreshlayout)
 
-    /* Android Lifecycle */
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.runtime)
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.service)
 
-    /* Design */
     implementation(libs.material)
 
-    /* ExoPlayer */
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.ui)
     implementation(libs.androidx.media3.exoplayer.hls)
     implementation(libs.androidx.media3.exoplayer.dash)
     implementation(libs.androidx.media3.session)
 
-    /* Retrofit and Kotlinx Serialization */
     implementation(libs.square.retrofit)
     implementation(libs.logging.interceptor)
     implementation(libs.kotlinx.serialization)
     implementation(libs.kotlinx.datetime)
     implementation(libs.converter.kotlinx.serialization)
 
-    /* NewPipe Extractor */
     implementation(libs.newpipeextractor)
 
-
-    /* Coil */
     coreLibraryDesugaring(libs.desugaring)
     implementation(libs.coil)
     implementation(libs.coil.network.okhttp)
 
-    /* Room */
     ksp(libs.room.compiler)
     implementation(libs.room)
 
-    /* Baseline profile generation */
     implementation(libs.androidx.profileinstaller)
     baselineProfile(project(":baselineprofile"))
 
-    /* AndroidX Paging */
     implementation(libs.androidx.paging)
 
-    /* Testing */
     testImplementation(libs.junit)
 }
