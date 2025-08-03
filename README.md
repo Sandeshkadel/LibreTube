@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <img src="https://libre-tube.github.io/images/gh-banner.png" width="auto" height="auto" alt="LibreTube">
 
@@ -179,3 +180,6 @@ LibreTube is [Free Software](https://en.wikipedia.org/wiki/Free_software): You c
 <a href="#start-of-content">↥ Scroll to top</a>
 </td></table>
 </div>
+=======
+# LibreTube
+>>>>>>> b90f1fef0cf0e6ae4f892feac3e70ceface767df
