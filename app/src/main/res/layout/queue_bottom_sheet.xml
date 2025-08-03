@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/standard_bottom_sheet"
+        style="@style/Widget.Material3.BottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Drag handle for accessibility -->
+            <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+                android:id="@+id/drag_handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/options_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/bottom_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_ripple"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/repeat"
+                    android:tooltipText="@string/tooltip_repeat"
+                    style="@style/QueueSheetOption"
+                    android:src="@drawable/ic_repeat" />
+
+                <ImageView
+                    android:id="@+id/add_to_playlist"
+                    android:tooltipText="@string/addToPlaylist"
+                    style="@style/QueueSheetOption"
+                    android:src="@drawable/ic_playlist_add" />
+
+                <ImageView
+                    android:id="@+id/sort"
+                    android:tooltipText="@string/tooltip_sort"
+                    style="@style/QueueSheetOption"
+                    android:src="@drawable/ic_sort" />
+
+                <ImageView
+                    android:id="@+id/watch_positions_options"
+                    android:tooltipText="@string/tooltip_watch_position"
+                    style="@style/QueueSheetOption"
+                    android:src="@drawable/ic_eye" />
+
+                <ImageView
+                    android:id="@+id/clear_queue"
+                    android:tooltipText="@string/tooltip_clear_queue"
+                    style="@style/QueueSheetOption"
+                    android:src="@drawable/ic_close" />
+
+                <ImageView
+                    android:id="@+id/dismiss"
+                    android:tooltipText="@string/tooltip_dismiss"
+                    style="@style/QueueSheetOption"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

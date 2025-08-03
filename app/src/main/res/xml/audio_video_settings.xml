@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/wifi">
+
+        <ListPreference
+            android:icon="@drawable/ic_hd"
+            app:defaultValue=""
+            app:entries="@array/defres"
+            app:entryValues="@array/defresValue"
+            app:key="default_res"
+            app:title="@string/defres"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_fullscreen"
+            app:defaultValue=""
+            app:entries="@array/defresNoPortrait"
+            app:entryValues="@array/defresValue"
+            app:key="default_res_no_fullscreen"
+            app:title="@string/no_fullscreen_resolution"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_headphones"
+            app:defaultValue="auto"
+            app:entries="@array/audioQuality"
+            app:entryValues="@array/audioQualityValues"
+            app:key="player_audio_quality"
+            app:title="@string/playerAudioQuality"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/mobile_data">
+
+        <ListPreference
+            android:icon="@drawable/ic_hd"
+            app:defaultValue=""
+            app:entries="@array/defres"
+            app:entryValues="@array/defresValue"
+            app:key="default_res_mobile"
+            app:title="@string/defres"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_fullscreen"
+            app:defaultValue=""
+            app:entries="@array/defresNoPortrait"
+            app:entryValues="@array/defresValue"
+            app:key="default_res_mobile_no_fullscreen"
+            app:title="@string/no_fullscreen_resolution"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_headphones"
+            app:defaultValue="auto"
+            app:entries="@array/audioQuality"
+            app:entryValues="@array/audioQualityValues"
+            app:key="player_audio_quality_mobile"
+            app:title="@string/playerAudioQuality"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/quality">
+
+        <ListPreference
+            android:icon="@drawable/ic_videocam"
+            app:defaultValue="webm"
+            app:entries="@array/playerVideoFormat"
+            app:entryValues="@array/playerVideoFormatValues"
+            app:isPreferenceVisible="false"
+            app:key="player_video_format"
+            app:title="@string/playerVideoFormat"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_music"
+            app:defaultValue="all"
+            app:entries="@array/playerAudioFormat"
+            app:entryValues="@array/playerAudioFormatValues"
+            app:isPreferenceVisible="false"
+            app:key="player_audio_format"
+            app:title="@string/playerAudioFormat"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_library"
+            android:summary="@string/lbry_hls_summary"
+            android:title="@string/lbry_hls"
+            app:key="lbry_hls" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/advanced">
+
+        <ListPreference
+            android:entries="@array/videoCodecs"
+            android:entryValues="@array/videoCodecValues"
+            android:icon="@drawable/ic_equalizer"
+            android:key="video_codecs"
+            app:defaultValue="all"
+            app:title="@string/codecs"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:entries="@array/audioCodecs"
+            android:entryValues="@array/audioCodecValues"
+            android:icon="@drawable/ic_equalizer"
+            android:key="audio_codecs"
+            app:defaultValue="all"
+            app:title="@string/audio_codecs"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
